@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fourth Floor Navigation Website of Jishi Building</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        .container img {
+            display: block;
+        }
+
+        .search-container {
+            position: absolute;
+            top: 100px;
+            left: 1100px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 30px 30px 30px 30px;
+            outline: none;
+            font-size: 1em;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px 30px 30px 30px;
+            margin-left: -5px;
+            transition: background-color 0.3s;
+        }
+        .search-container button:hover {
+            background-color: #0056b3;
+            border-radius: 30px 30px 30px 30px;
+        }
+
+
+        /*426、428、430、432、434*/
+        .room426 {
+            position: absolute;
+            top: -140px;  /* 根据需要调整位置 */
+            left: 295px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room428 {
+            position: absolute;
+            top: -140px;  /* 根据需要调整位置 */
+            left: 345px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room430 {
+            position: absolute;
+            top: -130px;  /* 根据需要调整位置 */
+            left: 460px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room432 {
+            position: absolute;
+            top: -140px;  /* 根据需要调整位置 */
+            left: 585px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room434 {
+            position: absolute;
+            top: -140px;  /* 根据需要调整位置 */
+            left: 635px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+
+        /*408、410、412、414、416、418*/
+        .room418 {
+            position: absolute;
+            top: 50px;  /* 根据需要调整位置 */
+            left: 245px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room416 {
+            position: absolute;
+            top: 135px;  /* 根据需要调整位置 */
+            left: 245px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room414 {
+            position: absolute;
+            top: 220px;  /* 根据需要调整位置 */
+            left: 255px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room412 {
+            position: absolute;
+            top: 360px;  /* 根据需要调整位置 */
+            left: 295px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room410{
+            position: absolute;
+            top: 390px;  /* 根据需要调整位置 */
+            left: 310px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room408{
+            position: absolute;
+            top: 420px;  /* 根据需要调整位置 */
+            left: 325px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+
+        /*408、410、412、414、416、418*/
+        .room419 {
+            position: absolute;
+            top: 50px;  /* 根据需要调整位置 */
+            left: 355px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room417 {
+            position: absolute;
+            top: 125px;  /* 根据需要调整位置 */
+            left: 355px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room409 {
+            position: absolute;
+            top: 350px;  /* 根据需要调整位置 */
+            left: 390px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .room407 {
+            position: absolute;
+            top: 375px;  /* 根据需要调整位置 */
+            left: 405px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+
+        /*441*/
+        .room441 {
+            position: absolute;
+            top: 50px;  /* 根据需要调整位置 */
+            left: 703px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*443*/
+        .room443 {
+            position: absolute;
+            top: 90px;  /* 根据需要调整位置 */
+            left: 703px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*451*/
+        .room451 {
+            position: absolute;
+            top: 175px;  /* 根据需要调整位置 */
+            left: 730px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*455*/
+        .room455 {
+            position: absolute;
+            top: 230px; /* 根据需要调整位置 */
+            left: 815px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale: 0.035;
+        }
+        /*456*/
+        .room456 {
+            position: absolute;
+            top: 280px; /* 根据需要调整位置 */
+            left: 735px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+
+        /*442*/
+        .room442 {
+            position: absolute;
+            top: 25px;  /* 根据需要调整位置 */
+            left: 590px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*444*/
+        .room444 {
+            position: absolute;
+            top: 65px;  /* 根据需要调整位置 */
+            left: 590px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*446*/
+        .room446 {
+            position: absolute;
+            top: 110px;  /* 根据需要调整位置 */
+            left: 595px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*448*/
+        .room448 {
+            position: absolute;
+            top: 155px;  /* 根据需要调整位置 */
+            left: 600px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        /*450*/
+        .room450 {
+            position: absolute;
+            top: 195px;  /* 根据需要调整位置 */
+            left: 620px; /* 根据需要调整位置 */
+            z-index: 10; /* 确保它在 map 图片之上 */
+            scale:0.035;
+        }
+        .content {
+            position: absolute;
+            top: 10px;
+            left: 300px;
+            z-index: 5; /* 确保它在 flag 之下 */
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to the Fourth Floor Navigation Website of Jishi Building</h1>
+<!--            <p>This is some additional content on top of the image.</p>-->
+        </div>
+        <img src="/Images/map.png" alt="map">
+
+        <div class="search-container">
+            <form action="/search" method="get">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="q" placeholder="Enter your keywords...">
+                <button id="searchButton" type="submit" >Search</button>
+            </form>
+        </div>
+
+        <script>
+            const searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const query = document.getElementById('search').value;
+            console.log('Search query:', query);
+            if (query.includes('407')||query.includes('科研用房')) {
+                window.location.href = 'room407.html';
+            } else if (query.includes('409')) {
+                window.location.href = 'room409.html';
+            } else if (query.includes('417') || query.includes('会议室')) {
+                window.location.href = 'room417.html';
+            } else if (query.includes('419') || query.includes('电子技术实验室')) {
+                window.location.href = 'room419.html';
+            } else if (query.includes('408')|| query.includes('软件工程技术与管理教研室办公室')|| query.includes('史扬')
+                || query.includes('赵钦佩')|| query.includes('朱宏明')|| query.includes('邓浩')) {
+                window.location.href = 'room408.html';
+            } else if (query.includes('410') || query.includes('领域软件系统教研室办公室')||query.includes('王冬青')
+            ||query.includes('李江峰')||query.includes('夏波涌')||query.includes('张颖')||query.includes('朱少民')) {
+                window.location.href = 'room410.html';
+            } else if (query.includes('412') || query.includes('刘岩')||query.includes('张惠娟')
+            ||query.includes('孙萍')||query.includes('罗怡桂')) {
+                window.location.href = 'room412.html';
+            } else if (query.includes('414') || query.includes('张苗苗')|| query.includes('杜庆峰')) {
+                window.location.href = 'room414.html';
+            } else if (query.includes('416') || query.includes('计算机房')) {
+                window.location.href = 'room416.html';
+            } else if (query.includes('418') || query.includes('教授办公室')||query.includes('张林')
+            ||query.includes('江建慧')||query.includes('刘琴')|| query.includes('袁时金')) {
+                window.location.href = 'room418.html';
+            } else if (query.includes('426') || query.includes('多媒体教学机房')) {
+                window.location.href = 'room426.html';
+            } else if (query.includes('428') || query.includes('服务器机房')){
+                window.location.href = 'room428.html';
+            } else if (query.includes('430')){
+                window.location.href = 'room430.html';
+            } else if (query.includes('432') || query.includes('党员之家')){
+                window.location.href = 'room432.html';
+            } else if (query.includes('434')|| query.includes('教室')) {
+                window.location.href = 'room434.html';
+            } else if (query.includes('441')) {
+                window.location.href = 'room441.html';
+            } else if (query.includes('443')||query.includes('陈梁')||query.includes('杨旻')
+            ||query.includes('文具仓库')||query.includes('实验中心办公室')) {
+                window.location.href = 'room443.html';
+            } else if (query.includes('451')||query.includes('穆斌')||query.includes('陈荣')
+            ||query.includes('党委办公室')||query.includes('周微微')||query.includes('副院长办公室')) {
+                window.location.href = 'room451.html';
+            } else if (query.includes('455')) {
+                window.location.href = 'room455.html';
+            } else if (query.includes('456')||query.includes('张晓雅')||query.includes('钱银飞')
+            ||query.includes('闫鹏')||query.includes('张晶')||query.includes('林伊凡')) {
+                window.location.href = 'room456.html';
+            } else if (query.includes('442')||query.includes('史清江')||query.includes('张荣庆')
+            ||query.includes('饶卫雄')) {
+                window.location.href = 'room442.html';
+            } else if (query.includes('444')||query.includes('档案室')) {
+                window.location.href = 'room444.html';
+            } else if (query.includes('446')||query.includes('创新创业办公室')
+            ||query.includes('葛蕾')||query.includes('焦嘉欣')||query.includes('钟梦莹')
+            ||query.includes('陈璞皎')||query.includes('严海洲')||query.includes('学工办')) {
+                window.location.href = 'room446.html';
+            } else if (query.includes('448')||query.includes('王彩霞')||query.includes('杨丹')
+            ||query.includes('教务办公室')) {
+                window.location.href = 'room448.html';
+            } else if (query.includes('450')||query.includes('赵生捷')||query.includes('院长')
+            ||query.includes('院长办公室')||query.includes('书记办公室')||query.includes('宋庆国')) {
+                window.location.href = 'room450.html';
+            } else {
+                alert('未找到匹配的办公室和人员！');
+            }
+            // Add your search logic here
+        });
+    </script>
+        <!--                       -->
+        <!-- 426、428、430、432、434 -->
+        <!--                       -->
+        <a href="room426.html">
+            <img src="Images/flags.png" alt="icon" class="room426">
+        </a>
+        <a href="room428.html">
+            <img src="Images/flags.png" alt="icon" class="room428">
+        </a>
+        <a href="room430.html">
+            <img src="Images/flags.png" alt="icon" class="room430">
+        </a>
+        <a href="room432.html">
+            <img src="Images/flags.png" alt="icon" class="room432">
+        </a>
+        <a href="room434.html">
+            <img src="Images/flags.png" alt="icon" class="room434">
+        </a>
+
+        <!--                           -->
+        <!-- 408、410、412、414、416、418-->
+        <!--                           -->
+        <a href="room408.html">
+            <img src="Images/flags.png" alt="icon" class="room408">
+        </a>
+        <a href="room410.html">
+            <img src="Images/flags.png" alt="icon" class="room410">
+        </a>
+        <a href="room412.html">
+            <img src="Images/flags.png" alt="icon" class="room412">
+        </a>
+        <a href="room414.html">
+            <img src="Images/flags.png" alt="icon" class="room414">
+        </a>
+        <a href="room416.html">
+            <img src="Images/flags.png" alt="icon" class="room416">
+        </a>
+        <a href="room418.html">
+            <img src="Images/flags.png" alt="icon" class="room418">
+        </a>
+
+        <!--                  -->
+        <!-- 407、409、417、419-->
+        <!--                  -->
+        <a href="room407.html">
+            <img src="Images/flags.png" alt="icon" class="room407">
+        </a>
+        <a href="room409.html">
+            <img src="Images/flags.png" alt="icon" class="room409">
+        </a>
+        <a href="room417.html">
+            <img src="Images/flags.png" alt="icon" class="room417">
+        </a>
+        <a href="room419.html">
+            <img src="Images/flags.png" alt="icon" class="room419">
+        </a>
+
+        <!--   441     -->
+        <a href="room441.html">
+            <img src="Images/flags.png" alt="icon" class="room441">
+        </a>
+        <!--   443     -->
+        <a href="room443.html">
+            <img src="Images/flags.png" alt="icon" class="room443">
+        </a>
+        <!--    451    -->
+        <a href="room451.html">
+            <img src="Images/flags.png" alt="icon" class="room451">
+        </a>
+        <!--    455    -->
+        <a href="room455.html">
+            <img src="Images/flags.png" alt="icon" class="room455">
+        </a>
+        <!--    456    -->
+        <a href="room456.html">
+            <img src="Images/flags.png" alt="icon" class="room456">
+        </a>
+
+        <!--   442     -->
+        <a href="room442.html">
+            <img src="Images/flags.png" alt="icon" class="room442">
+        </a>
+        <!--   444     -->
+        <a href="room444.html">
+            <img src="Images/flags.png" alt="icon" class="room444">
+        </a>
+        <!--   446     -->
+        <a href="room446.html">
+            <img src="Images/flags.png" alt="icon" class="room446">
+        </a>
+        <!--   448     -->
+        <a href="room448.html">
+            <img src="Images/flags.png" alt="icon" class="room448">
+        </a>
+        <!--   450     -->
+        <a href="room450.html">
+            <img src="Images/flags.png" alt="icon" class="room450">
+        </a>
+    </div>
+</body>
+</html>
